@@ -22,7 +22,7 @@
 
 </div>
   <ul class="artistlist">
-    <li class="artist cf" ng-repeat="artist in artists | filter: query | orderBy: artistOrder:direction">
+    <li ng-animate="'animate'" class="artist cf" ng-repeat="artist in artists | filter: query | orderBy: artistOrder:direction">
       <a href="#/details/{{ artists.indexOf(artist) }}">
         <img ng-src="images/{{artist.shortname}}_tn.jpg" alt="photo of {{artist.name}}">
         <div class="info">
