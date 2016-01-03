@@ -7,7 +7,7 @@ myApp.controller('MyController', ['$scope', '$http', function ($scope, $http) {
   // chrome cross-origin policy problems
   $http.get('js/data.json').success(function (data) {
     $scope.artists = data;
-    // $scope.artistOrder = 'name';
+    $scope.artistOrder = 'name';
   });
 
 }]);
