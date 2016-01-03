@@ -1,4 +1,4 @@
-var artistControllers = angular.module('artistControllers', []);
+var artistControllers = angular.module('artistControllers', ['ngAnimate']);
 
 artistControllers.controller('ListController', ['$scope', '$http', function ($scope, $http) {
 
@@ -23,7 +23,7 @@ artistControllers.controller('DetailsController', ['$scope', '$http', '$routePar
       $scope.prevItem = $scope.artists.length - 1;
     }
 
-    if ($routeParams.itemId > $scope.artists.length-1) {
+    if ($routeParams.itemId < $scope.artists.length-1) {
       $scope.nextItem = Number($routeParams.itemId) + 1;
     } else {
       $scope.nextItem = 0;
