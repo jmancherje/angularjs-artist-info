@@ -1,6 +1,6 @@
-var myApp = angular.module('myApp', []);
+var artistControllers = angular.module('artistControllers', []);
 
-myApp.controller('MyController', ['$scope', '$http', function ($scope, $http) {
+artistControllers.controller('ListController', ['$scope', '$http', function ($scope, $http) {
 
   // use http service to get data from json file.
   // running app through live-server to prevent 
